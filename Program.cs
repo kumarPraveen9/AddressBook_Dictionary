@@ -1,4 +1,4 @@
-namespace EmplyOops
+namespace AddressBook
 {
     class Program
     {

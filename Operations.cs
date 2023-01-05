@@ -41,7 +41,22 @@ namespace AddressBook
             Console.WriteLine("\n");
         }
         
-       
+        public void display()
+        {
+            Console.WriteLine("-------------Display Operation-----------");
+            foreach (var p in Program.Personlist)
+            {
+                Console.WriteLine(p.fname);
+                Console.WriteLine(p.lname);
+                Console.WriteLine(p.addr);
+                Console.WriteLine(p.city);
+                Console.WriteLine(p.state);
+                Console.WriteLine(p.zip);
+                Console.WriteLine(p.phnumber);
+                Console.WriteLine(p.mail);
+                Console.WriteLine("\n");
+            }
+        }
 
         
 

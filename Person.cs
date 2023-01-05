@@ -8,32 +8,17 @@ namespace AddressBook
 {
     public class Person
     {
+        public string fname { get; set; }
+        public string lname { get; set; }
+       
+        public string addr { get; set; }
+        public string city { get; set; }
+        public string state { get; set; }
 
-        public void PersonDetails()
-        {
-            Console.WriteLine("=========================================");
-            Console.WriteLine("Enter the first name of Person: ");
-            string fname = Console.ReadLine();
-            Console.WriteLine("Enter the last name of Person: ");
-            string lname = Console.ReadLine();
-            Console.WriteLine("Enter the address of Person: ");
-            string addr = Console.ReadLine();
-            Console.WriteLine("Enter the city of Person: ");
-            string city = Console.ReadLine();
-            Console.WriteLine("Enter the state of Person: ");
-            string state = Console.ReadLine();
-            Console.WriteLine("Enter the zip code of Person: ");
-            string zip = Console.ReadLine();
-            Console.WriteLine("Enter the phone number of Person: ");
-            string phnumber = Console.ReadLine();
-            Console.WriteLine("Enter the mail of Person: ");
-            string mail = Console.ReadLine();
-            Console.WriteLine("\n");
+        public string zip { get; set; }
 
-            AddressModel addressModel = new AddressModel(fname,lname,addr,city,state,zip,phnumber,mail);
-            Console.WriteLine(addressModel.Contacts());
-            Console.WriteLine("=========================================");
+        public string phnumber { get; set; }
+        public string mail { get; set; }
 
-        }
     }
 }

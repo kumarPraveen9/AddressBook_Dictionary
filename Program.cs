@@ -7,6 +7,8 @@ namespace AddressBook
             
             
             Console.WriteLine("Welcome to Address Book Program");
+            Person person= new Person();
+            person.PersonDetails();
             
       
         }

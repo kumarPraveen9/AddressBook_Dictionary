@@ -33,10 +33,6 @@ namespace AddressBook
             this.phnumber = phnumber;
             this.email = email;
         }
-        public string Contacts()
-        {
-
-            return this.fname + " " + this.lname + " " + this.addr+" "+this.city+" "+this.state+" "+this.zip+" "+this.phnumber+" "+this.email;
-        }
+       
     }
 }

@@ -8,7 +8,9 @@ namespace AddressBook
             
             Operations operations = new Operations();
             operations.addPerson();
+            operations.display();
             operations.edit();
+            operations.delete();
         }
     }
 }

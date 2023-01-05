@@ -6,11 +6,8 @@ namespace AddressBook
         {
             
             
-            Console.WriteLine("enter the number of cantacts you want to add: ");
-            int n=Convert.ToInt32(Console.ReadLine());  
-            AddressBookArray addressBookArray=new AddressBookArray();
-            addressBookArray.addPerson(n);
-            
+            Operations operations = new Operations();
+            operations.addPerson();
       
         }
     }

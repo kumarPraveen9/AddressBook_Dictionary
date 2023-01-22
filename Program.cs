@@ -2,7 +2,7 @@ namespace AddressBook
 {
     class Program
     {
-        public static List<Person> Personlist=new List<Person>();
+       
         
         public static void Main(string[] args)
         {
@@ -21,7 +21,7 @@ namespace AddressBook
                 while (z > 0)
                 {
                     Console.WriteLine("Enter a number to do which operation:");
-                    Console.WriteLine("1)Add_Contact\t2)Display_Contacts\t3)Edit_Contact\t4)Delete_Contact\t5)Exit");
+                    Console.WriteLine("1)Add_Contact\t2)Display_Contacts\t3)Edit_Contact\t4)Delete_Contact\t5)Exit\t6)Search");
                     int r = Convert.ToInt32(Console.ReadLine());
 
 
@@ -43,6 +43,9 @@ namespace AddressBook
                             break;
                         case 5:
                             z = 0;
+                            break;
+                        case 6:
+                           operations.search();
                             break;
                         default:
                             Console.WriteLine("Oops a valid number to do which operation:");

@@ -154,29 +154,37 @@ namespace dict
                 Edit_Detail[6], Edit_Detail[7]);
             Record.Check();
         }
-        public void search(string name, int cityOrState)
+        public int search(string name, int cityOrState)
         {
+            int num = 0;
             foreach (string[] details in Page.Values)
             {
                 if (cityOrState == 1)
                 {
                     Func<string[], bool> InCity = details => details[3].ToLower() == name.ToLower();
                     if (InCity(details))
+                    {
                         Console.WriteLine(details[0]);
+                        num++;
+                    }
                 }
-                else
+                else if (cityOrState == 2)
                 {
                     Func<string[], bool> InState = details => details[4].ToLower() == name.ToLower();
                     if (InState(details))
+                    {
                         Console.WriteLine(details[0]);
+                        num++;
+                    }
                 }
             }
+            return num;
         }
         public void viewContacts()
         {
             Console.Write("Search by (City/State): ");
             string cityOrState = Console.ReadLine().ToLower();
-            if (cityOrState == "city")
+            if (cityOrState.ToLower() == "city")
             {
                 Console.Write("Enter the name of the city: ");
                 string city = Console.ReadLine();
@@ -185,7 +193,7 @@ namespace dict
                     Display(name);
                 persons.Clear();
             }
-            else
+            else if (cityOrState.ToLower() == "state")
             {
                 Console.Write("Enter the name of the state: ");
                 string state = Console.ReadLine();
@@ -291,8 +299,10 @@ namespace dict
                             num = 2;
                         }
                         Console.WriteLine("Names of people living in {0} are:\n", name);
-                        Relatives.search(name, num);
-                        Work.search(name, num);
+                        int result1 = Relatives.search(name, num);
+                        int result2 = Work.search(name, num);
+                        int result= result1+result2;
+                        Console.WriteLine("Number of people in {0} are {1}", name, result);
                         break;
                     case 4:
                         Console.WriteLine("\n1 for Relatives");
